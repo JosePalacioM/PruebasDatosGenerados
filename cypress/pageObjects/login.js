@@ -18,9 +18,15 @@ const checkValidLogin = function (cy, baseUrl){
   cy.url().should('eq', baseUrl + 'ghost/#/dashboard')
 };
 
+const checkInvalidLogin = function (cy, baseUrl){
+  cy.url().should('eq', baseUrl + 'ghost/#/signin')
+};
+
+
 module.exports ={
   inputNombreUsuario:inputNombreUsuario,
   inputPassword:inputPassword,
   clickBoton:clickBoton,
-  checkValidLogin:checkValidLogin
+  checkValidLogin:checkValidLogin,
+  checkInvalidLogin:checkInvalidLogin
 }
