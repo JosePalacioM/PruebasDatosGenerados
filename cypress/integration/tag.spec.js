@@ -48,4 +48,20 @@ describe('Tag tests', () => {
         tagPage.checkSubmitSuccess(cy)
     });
 
+    it('5. Enter invalid color must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagNameInput(cy).type(faker.lorem.sentence())
+        tagPage.tagColor(cy).type(faker.lorem.sentence())
+        tagPage.submit(cy)
+        tagPage.checkIfFormError(cy)
+    });
+
+    it('6. Enter invalid description must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagNameInput(cy).type(faker.lorem.sentence())
+        tagPage.tagDescription(cy).type(faker.lorem.words(100))
+        tagPage.submit(cy)
+        tagPage.checkIfFormError(cy)
+    });
+
 });
