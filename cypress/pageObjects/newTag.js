@@ -31,10 +31,12 @@ const checkSubmitSuccess = function (cy) {
 
 const checkSubmitInvalid = function (cy) {
     cy.get('span').contains('Saved').should('not.exist')
+    cy.screenshot()
 }
 
 const checkIfFormError = function (cy) {
     cy.get('span[class="error"]').should('exist')
+    cy.screenshot()
 }
 
 module.exports = {
