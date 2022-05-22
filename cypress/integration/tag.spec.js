@@ -1,4 +1,5 @@
-import { baseUrl, password, userName, randomMail, randomPassword} from "../support/constants";
+import { baseUrl, password, userName} from "../support/constants";
+import {faker} from '@faker-js/faker'
 
 describe('Tag tests', () => {
     const tagPage = require('../pageObjects/newTag');
@@ -16,11 +17,19 @@ describe('Tag tests', () => {
 
     it('Create a valid tag' , () => {
         tagPage.visitPage(cy)
-        tagPage.tagNameInput(cy).type('TAG')
-        tagPage.tagColor(cy).type('997a7a')
-        tagPage.tagSlug(cy).type('hola')
-        tagPage.tagDescription(cy).type('This is a description')
+        tagPage.tagNameInput(cy).type(faker.commerce.department())
+        tagPage.tagColor(cy).type(faker.internet.color().replace('#', ''))
+        tagPage.tagSlug(cy).type(faker.commerce.department())
+        tagPage.tagDescription(cy).type(faker.lorem.paragraph())
         tagPage.submit(cy)
         tagPage.checkSubmitSuccess(cy)
-    })
+    });
+
+    it('Create a tag without name must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagDescription(cy).type(faker.lorem.paragraph())
+        tagPage.submit(cy)
+        tagPage.checkSubmitInvalid(cy)
+        tagPage.checkIfFormError(cy)
+    });
 });

@@ -25,7 +25,16 @@ const submit = function (cy) {
 }
 
 const checkSubmitSuccess = function (cy) {
+    cy.wait(500)
     cy.get('span').contains('Saved').should('exist')
+}
+
+const checkSubmitInvalid = function (cy) {
+    cy.get('span').contains('Saved').should('not.exist')
+}
+
+const checkIfFormError = function (cy) {
+    cy.get('span[class="error"]').should('exist')
 }
 
 module.exports = {
@@ -35,5 +44,7 @@ module.exports = {
     tagSlug:tagSlug,
     tagDescription:tagDescription,
     submit:submit,
-    checkSubmitSuccess:checkSubmitSuccess
+    checkSubmitSuccess:checkSubmitSuccess,
+    checkSubmitInvalid:checkSubmitInvalid,
+    checkIfFormError:checkIfFormError,
 }
