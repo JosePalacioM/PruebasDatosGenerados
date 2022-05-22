@@ -1,11 +1,11 @@
-# PruebasDatosGenerados_E2E Grupo-21
-Pruebas automaticas
+# Pruebas Automáticas con Datos Generados_E2E Grupo-21
+PruebasDatosGenerados_E2E Grupo-21
 
 # Integrantes:
-José Alexander Palacio Muñoz - j.palaciom@uniandes.edu.co
-Oscar Andrés Alba Barragán - o.alba@uniandes.edu.co
-Diego Fernando Castro Plazas - df.castrop1@uniandes.edu.co
-Diego Fernando Ramírez Rodríguez - df.ramirezr1@uniandes.edu.co
+- José Alexander Palacio Muñoz - j.palaciom@uniandes.edu.co
+- Oscar Andrés Alba Barragán - o.alba@uniandes.edu.co
+- Diego Fernando Castro Plazas - df.castrop1@uniandes.edu.co
+- Diego Fernando Ramírez Rodríguez - df.ramirezr1@uniandes.edu.co
 
 # Descripción
 Las pruebas que se detallan a continuación permiten testear la aplicación Ghost (versión 4.47.0) a partir de la validación combinaciones de casos de uso.
