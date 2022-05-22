@@ -66,7 +66,7 @@ Los escenarios ejecutados, con su respectiva estrategia de generación de datos 
 |./integration/Login.spec.js|3. Login con usuario inexistente|login invalido|aleatorio|
 |./integration/Login.spec.js|4. Login con password vacío|login invalido|a_priori|
 |./integration/Login.spec.js|5. Login con password equivocado,|login invalido|aleatorio|
-|---|---|---|---|
+|_|_|_|_|
 |./integration/pages.spec.js|1. Login, Crear pagina con descripción con video embebido y bookmark embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
 |./integration/pages.spec.js|2. Login, Crear pagina con descripcion con producto con titulo y boton con url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
 |./integration/pages.spec.js|3. Login, Crear pagina con descripcion y con producto con titulo y boton sin url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
@@ -133,6 +133,8 @@ Los escenarios ejecutados, con su respectiva estrategia de generación de datos 
 |./integration/pages.spec.js|64. Crear pagina con Callout, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
 |./integration/pages.spec.js|65. Crear pagina con bookmark, Validar que pagina se creó | Validar que pagina se creó |a_priori|
 |./integration/pages.spec.js|66. Crear pagina con video embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
-![image](https://user-images.githubusercontent.com/98669202/169716363-a27bd135-01f4-49bc-9ef8-ae5186a8691d.png)
+  
+  
+Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
 
 
