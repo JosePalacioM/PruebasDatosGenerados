@@ -59,7 +59,80 @@ Imagen 5.
 
 Los escenarios ejecutados, con su respectiva estrategia de generación de datos y su tipo de oráculo se detalla a continuación
 
-|Escenario|Estrategia|Oráculo|Descripción (si es necesaria)|
-|----|-------|--------|-----------|
-| | | | |
+|Archivo de pruebas|Escenario|Oráculo|Tipos de datos|
+|---|---|---|---|
+|./integration/Login.spec.js|1. Login correcto|login valido|a_priori|
+|./integration/Login.spec.js|2. Login con usuario vacío|login invalido|a_priori|
+|./integration/Login.spec.js|3. Login con usuario inexistente|login invalido|aleatorio|
+|./integration/Login.spec.js|4. Login con password vacío|login invalido|a_priori|
+|./integration/Login.spec.js|5. Login con password equivocado,|login invalido|aleatorio|
+|---|---|---|---|
+|./integration/pages.spec.js|1. Login, Crear pagina con descripción con video embebido y bookmark embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|2. Login, Crear pagina con descripcion con producto con titulo y boton con url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|3. Login, Crear pagina con descripcion y con producto con titulo y boton sin url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|4. Login, Crear pagina con descripcion con producto con titulo muy , Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|5. Login, Crear pagina con descripcion con producto con titulo y rating, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|6. Login, Crear pagina con descripcion con producto y solo descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|7. Login, Crear pagina con descripcion con producto y solo el título, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|8. Login, Crear pagina con descripcion y producto, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|9. Login, Crear pagina con producto con titulo y boton sin url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|10. Login, Crear pagina con producto con titulo muy grande, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|11. Login, Crear pagina con producto con titulo y boton con url, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|12. Login, Crear pagina con producto con titulo y rating, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|13. Login, Crear pagina con producto y solo descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|14. Login, Crear pagina con producto y solo el título, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|15. Login, Crear pagina con vimeo embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|16. Login, Crear pagina con twitter embebido y descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|17. Login, Crear pagina con spotify embebido y descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|18. Login, Crear pagina con funcion otra url embebida y descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|19. Login, Crear pagina con funcion otra url embebida, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|20. Login, Crear pagina con url en la descripcion, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|21. Login, Crear pagina con spotify embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|22. Login, Crear pagina con vimeo embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|23.Login, Crear pagina con twitter embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|24. Login, Crear pagina con descripcion y video Youtube, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|25. Login, Crear pagina con bookmark cuya url es de una imagen, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|26. Login, Crear pagina con bookmark cuya url no existe, Modificar url de la página, Validar que falló el bookmark | Validar que falló el bookmark |aleatorio|
+|./integration/pages.spec.js|27. Login, Crear pagina con bookmark que no es una url, Modificar url de la página, Validar que falló el bookmark | Validar que falló el bookmark |aleatorio|
+|./integration/pages.spec.js|28. Login, Crear pagina con titulo muy grande, Modificar url de la página, Validar que falló al salvarse | Validar que falló al salvarse |aleatorio|
+|./integration/pages.spec.js|29. Login, Crear pagina con elemento Toggle, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|30. Login, Crear pagina con Callout, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|31. Login, Crear pagina con bookmark, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|32. Login, Crear pagina con video embebido, Modificar url de la página, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|33. Crear pagina con video y bookmark, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|34. Crear pagina sencilla cambiando su url, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|35. Crear pagina con descripcion con producto con titulo y boton con url, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|36. Crear pagina con descripcion y con producto con titulo y boton sin url, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|37. Crear pagina con descripcion con producto con titulo muy grande, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|38. Crear pagina con descripcion con producto con titulo y rating, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|39. Crear pagina con descripcion con producto y solo descripcion, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|40. Crear pagina con descripcion con producto y solo el título, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|41. Crear pagina con descripcion y producto, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|42. Crear pagina con producto con titulo y boton sin url, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|43. Crear pagina con producto con titulo muy grande, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|44. Crear pagina con producto con titulo y boton con url, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|45. Crear pagina con producto con titulo y rating, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|46. Crear pagina sencilla, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|47. Crear pagina con producto y solo descripcion, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|48. Crear pagina con producto y solo el título, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|49. Crear pagina con vimeo embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|50. Crear pagina con twitter embebido y descripcion, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|51. Crear pagina con spotify embebido y descripcion, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|52. Crear pagina con funcion otra url embebida y descripcion, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|53. Crear pagina con funcion otra url embebida, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|54. Crear pagina con url en la descripcion, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|55. Crear pagina con spotify embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|56. Crear pagina con vimeo embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|57. Crear pagina con twitter embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|58. Crear pagina con descripcion y video Youtube, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|59. Crear pagina con bookmark cuya url es de una imagen, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|60. Crear pagina con bookmark cuya url no existe, Validar que falló el bookmark | Validar que falló el bookmark |a_priori|
+|./integration/pages.spec.js|61. Crear pagina con bookmark que no es una url, Validar que falló el bookmark | Validar que falló el bookmark |aleatorio|
+|./integration/pages.spec.js|62. Crear pagina con titulo muy grande, Validar que falló al salvarse | Validar que falló al salvarse |aleatorio|
+|./integration/pages.spec.js|63. Crear pagina con elemento Toggle, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|64. Crear pagina con Callout, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
+|./integration/pages.spec.js|65. Crear pagina con bookmark, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|66. Crear pagina con video embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+![image](https://user-images.githubusercontent.com/98669202/169716363-a27bd135-01f4-49bc-9ef8-ae5186a8691d.png)
+
 
