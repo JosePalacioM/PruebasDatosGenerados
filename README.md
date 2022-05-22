@@ -20,7 +20,7 @@ La herramienta seleccionada para realizar las pruebas es Cypress
 
 La para obtener y ejecutar la versión 4.47.0 de la aplicación Ghost se descargó una imagen de esta versión en Docker y se le asignó el puerto 3002 con el siguiente comando en la terminal de PowerShell:
 
-  docker run -d -e url=http://localhost:3002 -p 3002:2368 --name ghost_4.47.0 ghost:4.47.0  
+  <docker run -d -e url=http://localhost:3002 -p 3002:2368 --name ghost_4.47.0 ghost:4.47.0>
 
 Una vez ejecutado este comando podrá ingresar a la url http://localhost:3002 para ver la aplicación Ghost corriendo.
 
@@ -33,12 +33,14 @@ Email address: hola@miso.com
 Password: Misotest2022*
 
 ![image](https://user-images.githubusercontent.com/98669202/169715537-0d44cc44-82b7-4024-aac0-b45b89cc4c64.png)
+  
 Imagen 1.
 
 
 2. Tambien importante tener en cuenta que la aplicación de Ghost permite un máximo de 100 ingresos como usuario administrador por dirección IP cada hora y como nuestras pruebas realizarán al rededor de 120 ingresos, cuando las pruebas fallen y generen la alerta que se muestra en la imagen 2, será necesario detener el contenedor de docker (imagen 3), borrar el contenedor (imagen 4), borrar el volumen (imagen 5) y volver a ejecutar el comando docker runn .. explicado en el punto anterior
 
 ![image](https://user-images.githubusercontent.com/98669202/169708276-19eb70a0-51ca-4aba-86e7-f49554cdf6bc.png)
+  
 Imagen 2.
 
 ![image](https://user-images.githubusercontent.com/98669202/169715616-7cb41657-dd3a-4fe7-a3ac-3f7f0aebb919.png)
