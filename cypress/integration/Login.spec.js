@@ -1,4 +1,5 @@
-import { baseUrl, password, userName, randomMail, randomPassword} from "../support/constants";
+import { baseUrl, password, userName } from "../support/constants";
+import { randomMail, randomPassword } from "../support/ramdomConstants";
 
 describe('Login', () => {
     const login = require('../pageObjects/login')
@@ -9,33 +10,33 @@ describe('Login', () => {
       cy.wait(3000);
     });
   
-    it('Login correcto', () => {
+    it('1. Login correcto, login valido, [a_priori]', () => {
         login.inputNombreUsuario(cy,userName)
         login.inputPassword(cy,password)
         login.clickBoton(cy)
         login.checkValidLogin(cy, baseUrl)
     });
 
-    it('Login con usuario vacío', () => {
+    it('2. Login con usuario vacío, login invalido, [a_priori]', () => {
       login.inputPassword(cy,password)
       login.clickBoton(cy)
       login.checkInvalidLogin(cy, baseUrl)
     });
 
-    it('Login con usuario inexistente', () => {
+    it('3. Login con usuario inexistente, login invalido, [aleatorio]', () => {
       login.inputNombreUsuario(cy,randomMail)
       login.inputPassword(cy,password)
       login.clickBoton(cy)
       login.checkInvalidLogin(cy, baseUrl)
     });
 
-    it('Login con password vacío', () => {
+    it('4. Login con password vacío, login invalido, [a_priori]', () => {
       login.inputNombreUsuario(cy,userName)
       login.clickBoton(cy)
       login.checkInvalidLogin(cy, baseUrl)
     });
 
-    it('Login con password equivocado', () => {
+    it('5. Login con password equivocado, login invalido, [aleatorio]', () => {
       login.inputNombreUsuario(cy,userName)
       login.inputPassword(cy,randomPassword)
       login.clickBoton(cy)
