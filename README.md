@@ -68,11 +68,12 @@ Para la generación de datos pseudo aleatorios dinámico, se utilizó la herrami
 
 # Escenarios
 
-Los escenarios ejecutados, con su respectiva estrategia de generación de datos y su tipo de oráculo se detalla a continuación
+Los 120 escenarios ejecutados, con su respectiva estrategia de generación de datos y su tipo de oráculo se detalla a continuación
 
 |Archivo de pruebas|Escenario|Oráculo|Tipos de datos|
 |---|---|---|---|
 |./integration/loginPseudo.spec.js|1. Login con solo un usuario que tiene un email|login invalido|pseudo aleatorio|
+|_|_|_|_|
 |./integration/Login.spec.js|1. Login correcto|login valido|a_priori|
 |./integration/Login.spec.js|2. Login con usuario vacío|login invalido|a_priori|
 |./integration/Login.spec.js|3. Login con usuario inexistente|login invalido|aleatorio|
