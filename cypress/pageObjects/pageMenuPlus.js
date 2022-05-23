@@ -10,7 +10,7 @@ const clickBookMark = function (cy) {
 
 const urlBookMark = function (cy, url){
     cy.get(`[placeholder="Paste URL to add bookmark content..."]`).type(url);
-    cy.wait(1000);
+    cy.wait(2000);
 }
 
 const clickPasteUrl = function (cy) {
