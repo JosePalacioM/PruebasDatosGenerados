@@ -183,6 +183,32 @@ Los 120 escenarios ejecutados, con su respectiva estrategia de generación de da
 |./integration/tag.spec.js|93. Create a tag with all the invalid data must generate a submit error| Validar que se genere un error de formulario|aleatorio|
 |./integration/tag.spec.js|94. Create a tag in this order: 1. Name 2. Slug 3. Description must pass| Validar que el tag fué creado satisfactoriamente|aleatorio|
 |./integration/tag.spec.js|95. Create a tag in this order: 1. Slug 2. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+| ./integration/post.spec.js | 96\. Post titulo y descripcion correcta                                                          | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 97\. Post titulo correcto con descripcion en blanco.                                             | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 99\. Post titulo correcto y descripcion con caracteres especiales.                               | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 99\. Post titulo correcto y descripcion se reescribe.                                            | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 100\. Post titulo con caracteres especiales y descripcion correcta.                               | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 101\. Post titulo con caracteres especiales y descripcion en blanco.                             | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 101\. Post titulo y descripcion con caracteres especiales.                                       | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 103\. Post titulo con caracteres especiales y descripcion se reescribe.                          | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 104\. Post reescribir titulo y descripcion correcta.                                             | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 105\. Post reescribir titulo y descripcion en blanco.                                            | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 106\. Post reescribir titulo y descripcion con caracteres especiales.                            | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 107\. Post reescribir titulo y reescribir descripcion.                                           | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 108\. Post titulo correcto, se borra descripcion y se crea bookmark.                             | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 109\. Post titulo con caracteres especiales, se borra descripcion y se crea bookmark.            | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 110\. Post titulo se reescribe, se borra descripcion y se crea bookmark.                         | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 111\. Post titulo correcto, descripcion se reescribe se crea un falso bookmark.                  | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 112\. Post titulo con caracteres especiales, descripcion se reescribe se crea un falso bookmark. | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 113\. Post titulo en blanco, descripcion se reescribe se crea un falso bookmark.                 | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 114\. Post titulo se reescribe, descripcion se reescribe se crea un falso bookmark.              | Validar bookMark del post | aleatorio |
+| ./integration/post.spec.js | 115\. Post titulo en blanco con descripcion correcta.                                            | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 116\. Post titulo en blanco con descripcion caracteres especiales.                               | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 117\. Post titulo con exceso de caracteres y descripcion correcta.                               | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 118\. Post titulo con exceso de caracteres y descripcion en blanco.                              | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 119\. Post titulo con exceso de caracteres y descripcion con caracteres especiales.              | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 120\. Post se reescribe descripcion y titulo con exceso de caracteres.                           | Validar titulo del post   | aleatorio |
+| ./integration/post.spec.js | 121\. Post titulo en blanco, se borra descripcion y se crea bookmark.                            |                           | aleatorio |
   
 Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
 
