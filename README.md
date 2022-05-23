@@ -36,8 +36,11 @@ Password: Misotest2022*
   
 Imagen 1.
 
+2. Para la ejecución de algunas pruebas se utilizó la función xpath de cypress, la cual, para ser usada se debe instalar con el siguiente comando:
+  npm install -D cypress-xpath
+  Además la línea que dice require('cypress-xpath') en el archivo./cypress/support/index.js no debe estar comentada
 
-2. Tambien importante tener en cuenta que la aplicación de Ghost permite un máximo de 100 ingresos como usuario administrador por dirección IP cada hora y como nuestras pruebas realizarán al rededor de 120 ingresos, cuando las pruebas fallen y generen la alerta que se muestra en la imagen 2, será necesario detener el contenedor de docker (imagen 3), borrar el contenedor (imagen 4), borrar el volumen (imagen 5) y volver a ejecutar el comando docker runn .. explicado en el punto anterior
+3. Tambien importante tener en cuenta que la aplicación de Ghost permite un máximo de 100 ingresos como usuario administrador por dirección IP cada hora y como nuestras pruebas realizarán al rededor de 120 ingresos, cuando las pruebas fallen y generen la alerta que se muestra en la imagen 2, será necesario detener el contenedor de docker (imagen 3), borrar el contenedor (imagen 4), borrar el volumen (imagen 5) y volver a ejecutar el comando docker runn .. explicado en el punto anterior
 
 ![image](https://user-images.githubusercontent.com/98669202/169708276-19eb70a0-51ca-4aba-86e7-f49554cdf6bc.png)
   
@@ -51,6 +54,7 @@ Imagen 4.
 
 ![image](https://user-images.githubusercontent.com/98669202/169715674-b6040943-4bb4-4c48-8fb2-c52fce1151ff.png)
 Imagen 5.
+  
 
 # Estrategias de generación de datos
   
