@@ -25,4 +25,4 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   })
 
-  //require('cypress-xpath')
+require('cypress-xpath')
