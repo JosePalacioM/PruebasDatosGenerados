@@ -133,6 +133,7 @@ Los escenarios ejecutados, con su respectiva estrategia de generación de datos 
 |./integration/pages.spec.js|64. Crear pagina con Callout, Validar que pagina se creó | Validar que pagina se creó |aleatorio|
 |./integration/pages.spec.js|65. Crear pagina con bookmark, Validar que pagina se creó | Validar que pagina se creó |a_priori|
 |./integration/pages.spec.js|66. Crear pagina con video embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
+|./integration/pages.spec.js|67. Crear pagina sencilla con un excerpt muy largo en los settings| Validar que el excerpt no admitio el texto largo |aleatorio|
   
   
 Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
