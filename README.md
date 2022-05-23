@@ -208,7 +208,7 @@ Los 120 escenarios ejecutados, con su respectiva estrategia de generación de da
 | ./integration/post.spec.js | 118\. Post titulo con exceso de caracteres y descripcion en blanco.                              | Validar titulo del post   | aleatorio |
 | ./integration/post.spec.js | 119\. Post titulo con exceso de caracteres y descripcion con caracteres especiales.              | Validar titulo del post   | aleatorio |
 | ./integration/post.spec.js | 120\. Post se reescribe descripcion y titulo con exceso de caracteres.                           | Validar titulo del post   | aleatorio |
-| ./integration/post.spec.js | 121\. Post titulo en blanco, se borra descripcion y se crea bookmark.                            |                           | aleatorio |
+| ./integration/post.spec.js | 121\. Post titulo en blanco, se borra descripcion y se crea bookmark.                            | Validar titulo del post | aleatorio |
   
 Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
 
