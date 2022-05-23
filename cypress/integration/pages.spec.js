@@ -14,8 +14,7 @@ describe('Pages', () => {
         login.clickBoton(cy)
         cy.visit(baseUrl + 'ghost/#/editor/page');
     });
-
-    
+  
     it('1. Login, Crear pagina con descripción con video embebido y bookmark embebido, Modificar url de la página, Validar que pagina se creó [aleatorio]', () => {
         pageEditor.clickSettings(cy)
         pageEditor.typePageUrl(cy,randomShortTitle)
@@ -896,4 +895,10 @@ describe('Pages', () => {
         pageEditor.checkConfirmation(cy)
     });
 
+    it('67. Crear pagina sencilla con un excerpt muy largo en los settings', () => {
+        pageEditor.clickSettings(cy)
+        pageEditor.typeExcerpt(cy,randomLargeString)
+        pageEditor.checkExcerptFail(cy)
+    });
+    
 });

@@ -162,6 +162,18 @@ const inputTitle = function (cy,title){
     cy.wait(2000)
   };
 
+  const typeExcerpt = function (cy,text){
+    cy.get('textarea[name="post-setting-custom-excerpt"]').type(text);
+    cy.wait(2000)
+    cy.get('input[name="post-setting-slug"]').click();
+    cy.wait(2000)
+  };
+
+  const checkExcerptFail = function (cy){
+    cy.xpath('/html/body/div[2]/div/main/div/div/div/div/div[2]/form/div[5]/p').click();
+    cy.wait(2000)
+  }
+
   module.exports ={
     inputTitle:inputTitle,
     inputText:inputText,
@@ -189,7 +201,8 @@ const inputTitle = function (cy,title){
     checkConfirmation:checkConfirmation,
     checkSavingFail:checkSavingFail,
     checkBookmarkFail:checkBookmarkFail,
-    clickPlusAgain:clickPlusAgain
-
+    clickPlusAgain:clickPlusAgain,
+    typeExcerpt:typeExcerpt,
+    checkExcerptFail:checkExcerptFail
   }
   
