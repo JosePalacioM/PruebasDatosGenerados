@@ -144,18 +144,18 @@ describe('Tag tests', () => {
         tagPage.checkIfFormError(cy)
     });
 
-    it('16. Create a tag with passing long text to the color must generate a form error' , () => {
+    it('16. Create a tag with passing long text to the color must generate a form field error' , () => {
         tagPage.visitPage(cy)
         tagPage.tagNameInput(cy).type(faker.commerce.department())
         tagPage.tagColor(cy).type(faker.lorem.text())
         tagPage.checkIfFormError(cy)
     });
 
-    it('17. Create a tag with passing long text to the color must generate a form error' , () => {
+    it('17. Create a tag with passing long text to the color must generate a submit error' , () => {
         tagPage.visitPage(cy)
         tagPage.tagNameInput(cy).type(faker.commerce.department())
         tagPage.tagColor(cy).type(faker.lorem.text())
-        tagPage.checkIfFormError(cy)
+        tagPage.checkSubmitInvalid(cy)
     });
 
     it('18. Create a tag only having the name must pass' , () => {
@@ -185,6 +185,76 @@ describe('Tag tests', () => {
         tagPage.visitPage(cy)
         tagPage.tagSlug(cy).type(faker.commerce.department())
         tagPage.tagColor(cy).type(faker.internet.color().replace('#', ''))
+        tagPage.tagNameInput(cy).type(faker.commerce.department()) 
+        tagPage.submit(cy)
+        tagPage.checkSubmitSuccess(cy)
+    });
+
+    it('22. Create a new tag with this order: 1. Description, 2. Name' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagDescription(cy).type(faker.lorem.paragraph())
+        tagPage.tagNameInput(cy).type(faker.commerce.department()) 
+        tagPage.submit(cy)
+        tagPage.checkSubmitSuccess(cy)
+    });
+
+    it('23. Create a new tag with this order: 1. Description, 2. Name 3. Slug' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagDescription(cy).type(faker.lorem.paragraph())
+        tagPage.tagNameInput(cy).type(faker.commerce.department())
+        tagPage.tagSlug(cy).type(faker.commerce.department())
+        tagPage.submit(cy)
+        tagPage.checkSubmitSuccess(cy)
+    });
+
+    it('24. Create a tag with invalid description and invalid name must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagDescription(cy).type(faker.lorem.words(100))
+        tagPage.tagNameInput(cy).type(faker.lorem.words(100))
+        tagPage.checkSubmitInvalid(cy)
+    });
+
+    it('25. Create a tag with valid color and not valid name must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagColor(cy).type(faker.internet.color().replace('#', ''))
+        tagPage.tagNameInput(cy).type(faker.lorem.words(100))
+        tagPage.checkSubmitInvalid(cy)
+    });
+
+    it('26. Create a tag with not valid color and invalid name must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagColor(cy).type(faker.lorem.word())
+        tagPage.tagNameInput(cy).type(faker.lorem.words(100))
+        tagPage.checkSubmitInvalid(cy)
+    });
+
+    it('27. Create a tag with valid name and invalid slug must fail' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagSlug(cy).type(faker.lorem.words(10))
+        tagPage.tagNameInput(cy).type(faker.lorem.word())
+        tagPage.checkSubmitInvalid(cy)
+    });
+
+    it('28. Create a tag with all the invalid data must generate a submit error' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagColor(cy).type(faker.lorem.words(100))
+        tagPage.tagNameInput(cy).type(faker.lorem.words(100))
+        tagPage.tagDescription(cy).type(faker.lorem.words(500))
+        tagPage.checkSubmitInvalid(cy)
+    });
+
+    it('29. Create a tag in this order: 1. Name 2. Slug 3. Description must pass' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagNameInput(cy).type(faker.commerce.department()) 
+        tagPage.tagSlug(cy).type(faker.commerce.department())
+        tagPage.tagDescription(cy).type(faker.lorem.paragraph())
+        tagPage.submit(cy)
+        tagPage.checkSubmitSuccess(cy)
+    });
+
+    it('30. Create a tag in this order: 1. Slug 2. Name' , () => {
+        tagPage.visitPage(cy)
+        tagPage.tagSlug(cy).type(faker.commerce.department())
         tagPage.tagNameInput(cy).type(faker.commerce.department()) 
         tagPage.submit(cy)
         tagPage.checkSubmitSuccess(cy)

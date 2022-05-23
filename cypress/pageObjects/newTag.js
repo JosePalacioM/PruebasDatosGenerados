@@ -35,8 +35,7 @@ const checkSubmitInvalid = function (cy) {
 }
 
 const checkIfFormError = function (cy) {
-    cy.get('span[class="error"]').should('exist')
-    cy.screenshot()
+    cy.get('span[class="error"]').should('exist').screenshot()
 }
 
 module.exports = {
