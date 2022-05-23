@@ -153,7 +153,36 @@ Los 120 escenarios ejecutados, con su respectiva estrategia de generación de da
 |./integration/pages.spec.js|65. Crear pagina con bookmark, Validar que pagina se creó | Validar que pagina se creó |a_priori|
 |./integration/pages.spec.js|66. Crear pagina con video embebido, Validar que pagina se creó | Validar que pagina se creó |a_priori|
 |./integration/pages.spec.js|67. Crear pagina sencilla con un excerpt muy largo en los settings| Validar que el excerpt no admitio el texto largo |aleatorio|
-  
+|./integration/pages.spec.js|67. Create a valid tag| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|67. Create a tag without name must fail| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|68. Create a tag without description must pass| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|69. Create a tag without color must pass| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|70. Enter invalid color must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|71. Enter invalid description must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|72. Create a new tag with this order: 1. Name, 2. Color, 3. Description, 4. Slug| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|73. Create a new tag with this order: 1. Color, 2. Name, 3. Description, 4. Slug| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|74. Create a new tag with this order: 1. Name, 2. Description, 3. Color, 4. Slug| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|75. Create a new tag with this order: 1. Slug, 2. Color, 3. Name, 4. Description| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|76. Create a tag with this order: 1. Name, 2. Delete name, 3 Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|77. Create a tag with this order: 1. Slug, 2. Delete slug, 3. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|78. Create a tag with passing long text| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|79. Create a tag with passing long text to the name must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|80. Create a tag with passing long text to the color| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|81. Create a tag with passing long text to the color must generate a form field error| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|82.  Create a tag with passing long text to the color must generate a submit error| Validar que no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|83. Create a tag only having the name must pass| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|84. Create a tag only having the description must fail| Validar que no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|85. Create a new tag with this order: 1. Slug, 2. Description, 3. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|86. Create a new tag with this order: 1. Slug, 2. Color, 3. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|87. Create a new tag with this order: 1. Description, 2. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|88. Create a new tag with this order: 1. Description, 2. Name 3. Slug| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|89. Create a tag with invalid description and invalid name must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|90. Create a tag with valid color and not valid name must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|91. Create a tag with not valid color and invalid name must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|92. Create a tag with valid name and invalid slug must fail| Validar que se genere un error de formulario y no se pueda crear el tag|aleatorio|
+|./integration/tag.spec.js|93. Create a tag with all the invalid data must generate a submit error| Validar que se genere un error de formulario|aleatorio|
+|./integration/tag.spec.js|94. Create a tag in this order: 1. Name 2. Slug 3. Description must pass| Validar que el tag fué creado satisfactoriamente|aleatorio|
+|./integration/tag.spec.js|95. Create a tag in this order: 1. Slug 2. Name| Validar que el tag fué creado satisfactoriamente|aleatorio|
   
 Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
 
