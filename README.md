@@ -52,8 +52,19 @@ Imagen 4.
 ![image](https://user-images.githubusercontent.com/98669202/169715674-b6040943-4bb4-4c48-8fb2-c52fce1151ff.png)
 Imagen 5.
 
-
-
+# Estrategias de generación de datos
+  
+## 1. Estrategia pool de datos a-priori
+Para la estrategia con datos a priori se utilizaron datos creados por los tester y ubicados en la carpeta ./cypress/support
+  
+## 2. Estrategia pool de datos (pseudo) aleatorio dinámico
+Para la generación de datos pseudo aleatorios dinámico, se utilizó la herramienta Mockaroo estableciendo un template de data para el caso requerido, posteriormente se generó un archivo json con 1000 registros y este fue ubicado dentro del proyecto cypress. En cada caso de pruebas implementado, se importó el mencionado archivo haciedo uso aletario de los registros allí encontrados.
+  
+ ## 3. Estrategia escenario aleatorio.
+ Para la generación aleatoria de datos, se utilizó la herramienta faker importando la librería en cada uno de los archivos que se utilizaron para generar los valores aleatorios. De acuerdo a las entradas del escenario de prueba a validar, se hacía uso de los métodos expuestos por la librería faker.
+  
+ 
+  
 
 # Escenarios
 
@@ -61,6 +72,7 @@ Los escenarios ejecutados, con su respectiva estrategia de generación de datos 
 
 |Archivo de pruebas|Escenario|Oráculo|Tipos de datos|
 |---|---|---|---|
+|./integration/loginPseudo.spec.js|1. Login con solo un usuario que tiene un email|login invalido|pseudo aleatorio|
 |./integration/Login.spec.js|1. Login correcto|login valido|a_priori|
 |./integration/Login.spec.js|2. Login con usuario vacío|login invalido|a_priori|
 |./integration/Login.spec.js|3. Login con usuario inexistente|login invalido|aleatorio|
@@ -138,4 +150,14 @@ Los escenarios ejecutados, con su respectiva estrategia de generación de datos 
   
 Las incidencias generadas en las pruebas se han reportado en el sistema de registro de incidencias de este repositorio.
 
+# Instrucciones adicionales
+Para ejecutar estas pruebas realize los siguientes pasos:
 
+1. Clone el repositorio en la ubicación de su preferencia través del comando "git clone https://github.com/JosePalacioM/PruebasDatosGenerados.git".
+2. Ingrese a la carpeta creada
+3. Ingrese con una consola a la misma carpeta
+4. Ejecute el comando "npm install cypress"
+5. Ejecute el comando "npm install @faker-js/faker --save-dev"
+6. Ejecute el comando "cypress open"
+7. El comando anterior desplegará la consolta de Cypress y en su interior, cada uno de los casos de prueba generados.
+8. Ejecute cada uno de los archivos de pruebas
