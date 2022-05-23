@@ -19,9 +19,16 @@ const selectPost = function (cy, postName) {
     cy.get('.gh-content-entry-title').contains(postName).click();
 }
 
+const viewTitlePost = function (cy,titePost){
+    //cy.get('.content-list').scrollIntoView().contains(titePost).should('be.visible');
+    cy.get('.gh-content-entry-title').contains(titePost).should('be.visible'); 
+}
+//class="view-container content-list"
+
 module.exports = {
     goCreatePost:goCreatePost,
     viewPosts:viewPosts,
     createdNewPost:createdNewPost,
-    selectPost:selectPost
+    selectPost:selectPost,
+    viewTitlePost:viewTitlePost
 }
